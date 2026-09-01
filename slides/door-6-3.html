@@ -4320,6 +4320,83 @@ body {
   margin-bottom: 18px !important;
 }
 
+
+
+/* ===== Door 6-3 · Fabric Stall Theme ===== */
+.deck-stage {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(79,70,229,.15), transparent 50%), radial-gradient(900px 500px at 0% 100%, rgba(99,102,241,.12), transparent 45%),
+    linear-gradient(160deg, #fbfdfc 0%, #eef6f4 48%, #e4f0ed 100%) !important;
+}
+.deck-stage::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: url("data:image/svg+xml,<svg viewBox='0 0 1920 200' style='position:absolute;bottom:0;left:0;right:0;opacity:0.15;pointer-events:none;z-index:1'>
+          <g fill='none' stroke='#4F46E5' stroke-width='2'>
+            <path d='M100 100 Q200 60 300 100 Q400 60 500 100 Q600 60 700 100'/>
+            <rect x='200' y='120' width='120' height='60' rx='4'/>
+            <path d='M400 80 L450 140 L500 80' stroke-linejoin='round'/>
+            <path d='M600 150 C700 100 800 100 900 150'/>
+            <rect x='1000' y='70' width='100' height='110' rx='8'/>
+            <path d='M1200 120 Q1300 80 1400 120 Q1500 80 1600 120'/>
+            <circle cx='1700' cy='100' r='35'/>
+            <path d='M1665 100 L1735 100 M1700 65 L1700 135'/>
+          </g>
+        </svg>") no-repeat bottom center;
+  background-size: cover;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 1;
+}
+.copy h1 em {
+  background: linear-gradient(90deg, #4F46E5, #6366F1) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+.kicker .snum {
+  background: #4F46E5 !important;
+}
+.dojo-pill {
+  background: rgba(79,70,229,.14) !important;
+}
+.dojo-pill:hover {
+  background: rgba(79,70,229,.24) !important;
+}
+.head-mid .code {
+  color: #6366F1 !important;
+  border-color: #4F46E566 !important;
+}
+.screen.night {
+  background:
+    radial-gradient(800px 420px at 50% -20%, #4F46E544, transparent 60%),
+    radial-gradient(70% 80% at 50% 100%, #6366F122, transparent 50%),
+    #071614 !important;
+}
+.screen.night .copy h1 em {
+  background: linear-gradient(90deg, #4F46E5, #6366F1) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+/* Door-specific hero engine badge */
+.door-hero-badge {
+  position: absolute;
+  top: 90px;
+  right: 40px;
+  background: #4F46E5;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font: 700 14px 'Outfit', sans-serif;
+  z-index: 50;
+  box-shadow: 0 4px 12px #4F46E566;
+}
+
 </style>
 </head>
 <body>
@@ -13672,7 +13749,7 @@ DAF.boot({
   "code": "6-3",
   "title": "Model Multi-Step Problems",
   "unit": "Grade 4 · Topic 6 · Door 6-3 · Souq al-Su’al",
-  "bg": "rope",
+  "bg": "fabric",
   "npc": "ropeseller",
   "tale": {
     "who": "ropeseller",
@@ -13687,6 +13764,9 @@ DAF.boot({
     "door": 6,
     "quest": "Every stall hides a step. Model them all, then answer."
   },
+  "doorTheme": "Fabric Stall",
+  "heroEngine": "reading",
+  "heroTitle": "Reveal the Hidden Question",
   "slides": [
     {
       "stage": 0,
@@ -14555,5 +14635,33 @@ DAF.boot({
 
 
 </script>
+
+<script>
+// Door 6-3 · Fabric Stall · Hero Engine Badge
+(function() {
+  const badge = document.createElement('div');
+  badge.className = 'door-hero-badge';
+  badge.textContent = '🎯 Reveal the Hidden Question';
+  badge.title = 'Read the story. Lift the curtain to find the intermediate question hiding inside.';
+  document.querySelector('.deck-stage').appendChild(badge);
+  
+  // Add door-specific scene SVG
+  const scene = document.createElement('div');
+  scene.innerHTML = `<svg viewBox="0 0 1920 200" style="position:absolute;bottom:0;left:0;right:0;opacity:0.15;pointer-events:none;z-index:1">
+          <g fill="none" stroke="#4F46E5" stroke-width="2">
+            <path d="M100 100 Q200 60 300 100 Q400 60 500 100 Q600 60 700 100"/>
+            <rect x="200" y="120" width="120" height="60" rx="4"/>
+            <path d="M400 80 L450 140 L500 80" stroke-linejoin="round"/>
+            <path d="M600 150 C700 100 800 100 900 150"/>
+            <rect x="1000" y="70" width="100" height="110" rx="8"/>
+            <path d="M1200 120 Q1300 80 1400 120 Q1500 80 1600 120"/>
+            <circle cx="1700" cy="100" r="35"/>
+            <path d="M1665 100 L1735 100 M1700 65 L1700 135"/>
+          </g>
+        </svg>`;
+  document.querySelector('.deck-stage').appendChild(scene.firstChild);
+})();
+</script>
+
 </body>
 </html>

@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gate 6 · Door Differentiation Comparison</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700;900&family=Outfit:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --night: #041615;
+  --night-card: #082220;
+  --gold: #c9a227;
+  --gold-lit: #f0cf6a;
+  --teal: #12857c;
+  --teal-lit: #2ec4b6;
+  --text: #eaf4f2;
+  --muted: #9ebdb7;
+  --dust: #759992;
+  --border: rgba(201,162,39,0.22);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: radial-gradient(1400px 900px at 50% -10%, #0c3330 0%, var(--night) 65%);
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding: 32px 24px 100px;
+}
+.wrap { max-width: 1400px; margin: 0 auto; }
+h1 { font-family: 'Fraunces', serif; font-size: 36px; color: #fff; margin-bottom: 8px; }
+h1 em { color: var(--gold-lit); font-style: italic; }
+.subtitle { color: var(--muted); font-size: 16px; margin-bottom: 32px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 20px;
+}
+.door-card {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform .2s ease, box-shadow .2s ease;
+  cursor: pointer;
+}
+.door-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+.door-preview {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.door-preview svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  opacity: 0.4;
+}
+.door-preview .hero-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font: 700 13px 'Outfit', sans-serif;
+  color: #fff;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.door-preview h2 {
+  position: relative;
+  z-index: 2;
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  padding: 0 20px;
+}
+.door-body {
+  background: var(--night-card);
+  padding: 20px;
+}
+.door-code {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--gold-lit);
+  margin-bottom: 8px;
+}
+.door-theme {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.door-engine {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.engine-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--dust);
+}
+.engine-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+}
+.engine-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.color-swatch {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+}
+.swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+.door-link {
+  display: block;
+  margin-top: 14px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color: var(--teal-lit);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  transition: background .15s ease;
+}
+.door-link:hover { background: rgba(46,196,182,0.15); }
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+  font-size: 13px;
+}
+.comparison-table th {
+  background: var(--night-card);
+  color: var(--gold-lit);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 2px solid var(--gold);
+}
+.comparison-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  vertical-align: top;
+  color: var(--muted);
+}
+.comparison-table tr:hover td { background: rgba(255,255,255,0.02); color: var(--text); }
+.td-door { font-weight: 800; color: #fff; }
+.td-engine { color: var(--teal-lit); font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Gate 6 · <em>Souq al-Su'al</em> — Five Unique Doors</h1>
+  <p class="subtitle">Each door now has its own visual identity, hero engine, and varied activity sequence. Click any door to open it.</p>
+
+  <div class="grid">
+    
+    <!-- Door 6-1 -->
+    <div class="door-card">
+      <div class="door-preview" style="background: radial-gradient(600px 300px at 50% 20%, rgba(245,158,11,.3), transparent 60%), linear-gradient(160deg, #1a1206, #2a1c0a);">
+        <div class="hero-badge" style="background: #F59E0B;">🎯 bar</div>
+        <h2>Stretch the Comparison Bars</h2>
+        <svg viewBox="0 0 400 100"><g fill="none" stroke="#F59E0B" stroke-width="2"><circle cx="80" cy="50" r="20"/><circle cx="160" cy="40" r="15"/><rect x="220" y="30" width="40" height="50" rx="6"/><path d="M300 60 Q340 30 380 60"/></g></svg>
+      </div>
+      <div class="door-body">
+        <div class="door-code">DOOR 6-1</div>
+        <div class="door-theme">🏪 Spice Stall · Saffron & Amber</div>
+        <div class="door-engine">
+          <span class="engine-label">Hero Engine</span>
+          <span class="engine-name">bar / ribbon</span>
+          <span class="engine-desc">Drag bar segments to model TIMES vs MORE. Watch the relationship between quantities.</span>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background: #F59E0B;" title="Primary: Saffron"></div>
+          <div class="swatch" style="background: #FBBF24;" title="Secondary: Amber"></div>
+          <div class="swatch" style="background: #FEF3C7;" title="Accent: Cream"></div>
+        </div>
+        <a class="door-link" href="door-6-1.html" target="_blank">Open Door 6-1 →</a>
+      </div>
+    </div>
+
+    <!-- Door 6-2 -->
+    <div class="door-card">
+      <div class="door-preview" style="background: radial-gradient(600px 300px at 50% 20%, rgba(146,64,14,.3), transparent 60%), linear-gradient(160deg, #1a0e04, #2a1808);">
+        <div class="hero-badge" style="background: #92400E;">🎯 treerings</div>
+        <h2>Unwind the Rope into Segments</h2>
+        <svg viewBox="0 0 400 100"><g fill="none" stroke="#92400E" stroke-width="3"><path d="M40 70 Q80 30 120 70 Q160 30 200 70 Q240 30 280 70" stroke-linecap="round"/><circle cx="330" cy="50" r="25"/><path d="M330 25 L330 75 M305 50 L355 50"/></g></svg>
+      </div>
+      <div class="door-body">
+        <div class="door-code">DOOR 6-2</div>
+        <div class="door-theme">🪢 Rope & Rigging · Hemp & Brown</div>
+        <div class="door-engine">
+          <span class="engine-label">Hero Engine</span>
+          <span class="engine-name">treerings / unwind</span>
+          <span class="engine-desc">Coil rope into equal segments. Divide to find one part. Unwind multiplication.</span>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background: #92400E;" title="Primary: Rope Brown"></div>
+          <div class="swatch" style="background: #B45309;" title="Secondary: Amber Brown"></div>
+          <div class="swatch" style="background: #FDE68A;" title="Accent: Hemp"></div>
+        </div>
+        <a class="door-link" href="door-6-2.html" target="_blank">Open Door 6-2 →</a>
+      </div>
+    </div>
+
+    <!-- Door 6-3 -->
+    <div class="door-card">
+      <div class="door-preview" style="background: radial-gradient(600px 300px at 50% 20%, rgba(79,70,229,.3), transparent 60%), linear-gradient(160deg, #0a0820, #141030);">
+        <div class="hero-badge" style="background: #4F46E5;">🎯 reading</div>
+        <h2>Reveal the Hidden Question</h2>
+        <svg viewBox="0 0 400 100"><g fill="none" stroke="#4F46E5" stroke-width="2"><path d="M40 40 Q80 20 120 40 Q160 20 200 40"/><rect x="80" y="50" width="80" height="35" rx="3"/><path d="M250 30 L280 60 L310 30" stroke-linejoin="round"/><rect x="340" y="25" width="50" height="55" rx="5"/></g></svg>
+      </div>
+      <div class="door-body">
+        <div class="door-code">DOOR 6-3</div>
+        <div class="door-theme">🧵 Fabric Stall · Indigo & Violet</div>
+        <div class="door-engine">
+          <span class="engine-label">Hero Engine</span>
+          <span class="engine-name">reading / hidden</span>
+          <span class="engine-desc">Split-pane reader. Lift the curtain to reveal the hidden intermediate question.</span>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background: #4F46E5;" title="Primary: Indigo"></div>
+          <div class="swatch" style="background: #6366F1;" title="Secondary: Violet"></div>
+          <div class="swatch" style="background: #E0E7FF;" title="Accent: Lavender"></div>
+        </div>
+        <a class="door-link" href="door-6-3.html" target="_blank">Open Door 6-3 →</a>
+      </div>
+    </div>
+
+    <!-- Door 6-5 -->
+    <div class="door-card">
+      <div class="door-preview" style="background: radial-gradient(600px 300px at 50% 20%, rgba(5,150,105,.3), transparent 60%), linear-gradient(160deg, #041a10, #082a1a);">
+        <div class="hero-badge" style="background: #059669;">🎯 openthebox</div>
+        <h2>Open the Ledger Chests</h2>
+        <svg viewBox="0 0 400 100"><g fill="none" stroke="#059669" stroke-width="2"><path d="M60 70 C90 40 120 40 150 70"/><circle cx="105" cy="35" r="15"/><rect x="200" y="30" width="60" height="50" rx="8"/><path d="M230 30 L230 15 L245 15"/><circle cx="320" cy="50" r="22"/><path d="M298 50 L342 50 M320 28 L320 72"/></g></svg>
+      </div>
+      <div class="door-body">
+        <div class="door-code">DOOR 6-5</div>
+        <div class="door-theme">☕ Qahwa House · Emerald & Green</div>
+        <div class="door-engine">
+          <span class="engine-label">Hero Engine</span>
+          <span class="engine-name">openthebox / purse</span>
+          <span class="engine-desc">Open 4 ledger chests. Verify multi-step budgets before paying. Count change honestly.</span>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background: #059669;" title="Primary: Emerald"></div>
+          <div class="swatch" style="background: #10B981;" title="Secondary: Green"></div>
+          <div class="swatch" style="background: #D1FAE5;" title="Accent: Mint"></div>
+        </div>
+        <a class="door-link" href="door-6-5.html" target="_blank">Open Door 6-5 →</a>
+      </div>
+    </div>
+
+    <!-- Door 6-6 -->
+    <div class="door-card">
+      <div class="door-preview" style="background: radial-gradient(600px 300px at 50% 20%, rgba(124,58,237,.3), transparent 60%), linear-gradient(160deg, #0e0820, #1a1030);">
+        <div class="hero-badge" style="background: #7C3AED;">🎯 scramble</div>
+        <h2>Assemble Two Solution Paths</h2>
+        <svg viewBox="0 0 400 100"><g fill="none" stroke="#7C3AED" stroke-width="2"><path d="M40 70 L80 30 L120 70" stroke-linejoin="round"/><path d="M160 70 L200 30 L240 70" stroke-linejoin="round"/><circle cx="300" cy="50" r="25"/><path d="M275 50 L325 50 M300 25 L300 75"/><path d="M350 70 C370 50 390 50 410 70"/></g></svg>
+      </div>
+      <div class="door-body">
+        <div class="door-code">DOOR 6-6</div>
+        <div class="door-theme">⚖️ Arbitrator's Tent · Purple & Violet</div>
+        <div class="door-engine">
+          <span class="engine-label">Hero Engine</span>
+          <span class="engine-name">scramble / second</span>
+          <span class="engine-desc">Build two distinct solution methods. Prove both arrive at the same answer. Sabr.</span>
+        </div>
+        <div class="color-swatch">
+          <div class="swatch" style="background: #7C3AED;" title="Primary: Deep Purple"></div>
+          <div class="swatch" style="background: #8B5CF6;" title="Secondary: Violet"></div>
+          <div class="swatch" style="background: #EDE9FE;" title="Accent: Lavender"></div>
+        </div>
+        <a class="door-link" href="door-6-6.html" target="_blank">Open Door 6-6 →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Comparison Table -->
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Door</th>
+        <th>Theme</th>
+        <th>Color</th>
+        <th>Hero Engine</th>
+        <th>Hero Title</th>
+        <th>Stage 3 Focus</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-door">6-1</td>
+        <td>🏪 Spice Stall</td>
+        <td><div class="swatch" style="background:#F59E0B;width:20px;height:20px;border-radius:4px;display:inline-block;"></div> Saffron</td>
+        <td class="td-engine">bar / ribbon</td>
+        <td>Stretch the Comparison Bars</td>
+        <td>Visual bar modeling for TIMES vs MORE</td>
+      </tr>
+      <tr>
+        <td class="td-door">6-2</td>
+        <td>🪢 Rope & Rigging</td>
+        <td><div class="swatch" style="background:#92400E;width:20px;height:20px;border-radius:4px;display:inline-block;"></div> Brown</td>
+        <td class="td-engine">treerings / unwind</td>
+        <td>Unwind the Rope into Segments</td>
+        <td>Divide to find one part</td>
+      </tr>
+      <tr>
+        <td class="td-door">6-3</td>
+        <td>🧵 Fabric Stall</td>
+        <td><div class="swatch" style="background:#4F46E5;width:20px;height:20px;border-radius:4px;display:inline-block;"></div> Indigo</td>
+        <td class="td-engine">reading / hidden</td>
+        <td>Reveal the Hidden Question</td>
+        <td>Lift curtain on intermediate step</td>
+      </tr>
+      <tr>
+        <td class="td-door">6-5</td>
+        <td>☕ Qahwa House</td>
+        <td><div class="swatch" style="background:#059669;width:20px;height:20px;border-radius:4px;display:inline-block;"></div> Emerald</td>
+        <td class="td-engine">openthebox / purse</td>
+        <td>Open the Ledger Chests</td>
+        <td>Multi-step budget verification</td>
+      </tr>
+      <tr>
+        <td class="td-door">6-6</td>
+        <td>⚖️ Arbitrator's Tent</td>
+        <td><div class="swatch" style="background:#7C3AED;width:20px;height:20px;border-radius:4px;display:inline-block;"></div> Purple</td>
+        <td class="td-engine">scramble / second</td>
+        <td>Assemble Two Solution Paths</td>
+        <td>Dual methods with sabr</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</body>
+</html>
