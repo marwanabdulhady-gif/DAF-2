@@ -158,3 +158,67 @@ For 13–21, write the factors of each number.
 - (D) 45 × 1, 15 × 1, 9 × 1
 
 ---
+
+
+---
+
+## 📚 Question Bank: Enrichment & Practice
+
+**CCSS Standards:** 4.OA.B.4  
+**Topic:** 7-2  
+**Question Types:** IXL • Wordwall • Quizizz • Kahoot • Real-World • Error Analysis
+
+> 💡 **How to use:** These questions provide varied practice beyond the textbook. Use them for extra practice, assessment, or gamified review.
+
+### 🔘 Multiple Choice (IXL Style)
+
+**Q1.** Which list shows ALL the factors of 18?
+
+   - A) 1, 2, 3, 6, 9, 18
+   - B) 1, 2, 3, 6, 18
+   - C) 2, 3, 6, 9, 18
+   - D) 1, 2, 3, 9, 18
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 1, 2, 3, 6, 9, 18
+
+**Explanation:** Factor pairs of 18: (1,18), (2,9), (3,6). List all: 1, 2, 3, 6, 9, 18.
+</details>
+
+### ✓✗ True or False (Quizizz Style)
+
+**Q2.** True or False: 17 is a prime number.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** True
+
+**Explanation:** 17 has only two factors: 1 and 17. Therefore, it is prime.
+</details>
+
+### 📦 Drag and Drop Sort
+
+**Q3.** Sort these numbers into Prime or Composite:
+
+   **Prime:** 13, 19, 23
+   **Composite:** 15, 21, 25
+
+### ✏️ Fill in the Blank (Wordwall Style)
+
+**Q4.** The first 5 multiples of 7 are: 7, ___, ___, ___, ___
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 14, 21, 28, 35
+
+**Explanation:** Multiples: 7×1=7, 7×2=14, 7×3=21, 7×4=28, 7×5=35.
+</details>
+
+---
+
+**🎯 Extension Challenge:** Create your own question in one of the formats above and trade with a partner!
+

@@ -149,3 +149,72 @@ For 3–8, write a comparison sentence and an equation. Find the value of the va
 - (A) 13 times  (B) 14 times  (C) 15 times  (D) 16 times
 
 ---
+
+
+---
+
+## 📚 Question Bank: Enrichment & Practice
+
+**CCSS Standards:** 4.OA.A.3  
+**Topic:** 6-2  
+**Question Types:** IXL • Wordwall • Quizizz • Kahoot • Real-World • Error Analysis
+
+> 💡 **How to use:** These questions provide varied practice beyond the textbook. Use them for extra practice, assessment, or gamified review.
+
+### 🔘 Multiple Choice (IXL Style)
+
+**Q1.** Ali has 3 times as many marbles as Sam. Sam has 12 marbles. How many marbles do they have together?
+
+   - A) 36
+   - B) 48
+   - C) 24
+   - D) 15
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 48
+
+**Explanation:** Ali has 3 × 12 = 36 marbles. Together: 36 + 12 = 48 marbles.
+</details>
+
+### 🌍 Real-World Word Problem
+
+**Q2.** A store sells notebooks in packages of 6. Sara wants to buy enough packages so she has at least 50 notebooks. How many packages should she buy? Explain your reasoning.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 9 packages
+
+**Explanation:** 50 ÷ 6 = 8 R2. She needs 8 full packages (48 notebooks) plus 1 more package to reach at least 50. So 9 packages = 54 notebooks.
+</details>
+
+### 🔍 Error Analysis
+
+**Q3.** Problem: 'There are 4 times as many red cars as blue cars. There are 8 blue cars.' Karim wrote: 4 + 8 = 12 red cars. Find his mistake.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 32 red cars
+
+**Explanation:** Karim added instead of multiplying. '4 times as many' means 4 × 8 = 32 red cars.
+</details>
+
+### 💭 Reasoning & Explanation
+
+**Q4.** A problem says '15 more than a number.' Another problem says '15 times a number.' How are these different? Give an example of each.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** Varies
+
+**Explanation:** '15 more' means addition (n + 15), while '15 times' means multiplication (15 × n). Example: If the number is 3, then '15 more' = 18, but '15 times' = 45.
+</details>
+
+---
+
+**🎯 Extension Challenge:** Create your own question in one of the formats above and trade with a partner!
+

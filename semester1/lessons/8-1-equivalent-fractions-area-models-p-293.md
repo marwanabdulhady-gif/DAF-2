@@ -74,3 +74,72 @@ Rectangle or circle: sixths shaded, then subdivided into twelfths. Shaded region
 **HOT:** Jassim, Laith, and Fares each ate ½ of their own same-size pizza but 1, 2, and 3 slices. Possible because the pizzas were cut into different numbers of slices.
 
 ---
+
+
+---
+
+## 📚 Question Bank: Enrichment & Practice
+
+**CCSS Standards:** 4.NF.A.1, 4.NF.A.2  
+**Topic:** 8-1  
+**Question Types:** IXL • Wordwall • Quizizz • Kahoot • Real-World • Error Analysis
+
+> 💡 **How to use:** These questions provide varied practice beyond the textbook. Use them for extra practice, assessment, or gamified review.
+
+### 🔘 Multiple Choice (IXL Style)
+
+**Q1.** Which fraction is equivalent to 2/3?
+
+   - A) 4/6
+   - B) 3/4
+   - C) 4/9
+   - D) 2/6
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 4/6
+
+**Explanation:** Multiply numerator and denominator by 2: (2×2)/(3×2) = 4/6.
+</details>
+
+### ✓✗ True or False (Quizizz Style)
+
+**Q2.** True or False: 3/4 > 5/8
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** True
+
+**Explanation:** Convert to common denominator: 3/4 = 6/8. Since 6/8 > 5/8, then 3/4 > 5/8.
+</details>
+
+### ✏️ Fill in the Blank (Wordwall Style)
+
+**Q3.** 2/5 + 1/5 = ___
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 3/5
+
+**Explanation:** When adding fractions with the same denominator, add the numerators: (2+1)/5 = 3/5.
+</details>
+
+### 🎨 Visual Model Question
+
+**Q4.** Draw a fraction bar to show that 1/2 = 2/4 = 4/8
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** Visual
+
+**Explanation:** Draw three bars of equal length. Divide first into 2 parts (shade 1), second into 4 parts (shade 2), third into 8 parts (shade 4). All show the same amount.
+</details>
+
+---
+
+**🎯 Extension Challenge:** Create your own question in one of the formats above and trade with a partner!
+

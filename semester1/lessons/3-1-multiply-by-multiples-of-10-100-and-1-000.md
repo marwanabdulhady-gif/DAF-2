@@ -156,3 +156,95 @@ Leveled Practice For 6–11, use basic facts, place value, and properties to hel
 16. Bassam says 4 × 800 is greater than 8 × 4,000. Rashid says 4 × 800 is less than 8 × 4,000. Without calculating, explain who is correct.
 
 ---
+
+
+---
+
+## 📚 Question Bank: Enrichment & Practice
+
+**CCSS Standards:** 4.NBT.B.5  
+**Topic:** 3-1  
+**Question Types:** IXL • Wordwall • Quizizz • Kahoot • Real-World • Error Analysis
+
+> 💡 **How to use:** These questions provide varied practice beyond the textbook. Use them for extra practice, assessment, or gamified review.
+
+### 🔘 Multiple Choice (IXL Style)
+
+**Q1.** What is 23 × 15?
+
+   - A) 345
+   - B) 245
+   - C) 335
+   - D) 255
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 345
+
+**Explanation:** Use partial products: (20 × 15) + (3 × 15) = 300 + 45 = 345.
+</details>
+
+### ✏️ Fill in the Blank (Wordwall Style)
+
+**Q2.** Use the area model: 24 × 13 = (20 × 13) + (___ × 13)
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 4
+
+**Explanation:** Break 24 into 20 + 4. So 24 × 13 = (20 × 13) + (4 × 13).
+</details>
+
+### ✓✗ True or False (Quizizz Style)
+
+**Q3.** True or False: 6 × 400 = 2,400
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** True
+
+**Explanation:** 6 × 4 = 24, so 6 × 400 = 2,400. When multiplying by multiples of 100, multiply the basic fact and add the zeros.
+</details>
+
+### 🔗 Matching Pairs (Kahoot Style)
+
+**Q4.** Match each multiplication with its product:
+
+   **Column A** | **Column B**
+   ---|---
+   25 × 40 | 1,000
+   12 × 50 | 600
+   30 × 30 | 900
+   15 × 20 | 300
+
+### 🌍 Real-World Word Problem
+
+**Q5.** A rectangular garden is 24 meters long and 18 meters wide. What is the area of the garden? Show your work using partial products.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 432 square meters
+
+**Explanation:** Area = length × width = 24 × 18. Partial products: (20 × 18) + (4 × 18) = 360 + 72 = 432 square meters.
+</details>
+
+### 🎨 Visual Model Question
+
+**Q6.** Draw an area model for 34 × 12. Label the partial products and find the total.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 408
+
+**Explanation:** Draw a rectangle divided into 4 sections: (30×10=300), (30×2=60), (4×10=40), (4×2=8). Total: 300+60+40+8=408.
+</details>
+
+---
+
+**🎯 Extension Challenge:** Create your own question in one of the formats above and trade with a partner!
+

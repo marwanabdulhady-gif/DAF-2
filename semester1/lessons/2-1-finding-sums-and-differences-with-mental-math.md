@@ -192,3 +192,96 @@ For 5–10, use mental math to solve.
 Select the correct sums/differences (multiple choice items from the student edition).
 
 ---
+
+
+---
+
+## 📚 Question Bank: Enrichment & Practice
+
+**CCSS Standards:** 4.NBT.B.4  
+**Topic:** 2-1  
+**Question Types:** IXL • Wordwall • Quizizz • Kahoot • Real-World • Error Analysis
+
+> 💡 **How to use:** These questions provide varied practice beyond the textbook. Use them for extra practice, assessment, or gamified review.
+
+### 🔘 Multiple Choice (IXL Style)
+
+**Q1.** What is 3,456 + 2,789?
+
+   - A) 6,245
+   - B) 5,245
+   - C) 6,145
+   - D) 5,145
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 6,245
+
+**Explanation:** Add column by column with regrouping: 6+9=15 (write 5, carry 1), 5+8+1=14 (write 4, carry 1), etc.
+</details>
+
+### ✏️ Fill in the Blank (Wordwall Style)
+
+**Q2.** Use mental math: 4,500 + 3,200 = ___
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 7,700
+
+**Explanation:** Add the thousands: 4,000 + 3,000 = 7,000. Add the hundreds: 500 + 200 = 700. Total: 7,700.
+</details>
+
+### ✓✗ True or False (Quizizz Style)
+
+**Q3.** True or False: 8,000 - 3,456 = 4,544
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** True
+
+**Explanation:** Subtract: 8,000 - 3,456. Borrow across zeros: 8,000 - 3,000 = 5,000, then 5,000 - 456 = 4,544.
+</details>
+
+### 🌍 Real-World Word Problem
+
+**Q4.** A library has 12,456 books. During the summer, they received 3,789 new books and removed 1,234 old books. How many books does the library have now?
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 15,011 books
+
+**Explanation:** Start: 12,456. Add new: 12,456 + 3,789 = 16,245. Remove old: 16,245 - 1,234 = 15,011.
+</details>
+
+### 🔍 Error Analysis
+
+**Q5.** Ahmed calculated 5,678 - 2,345 and got 3,323. Find his mistake.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 3,333
+
+**Explanation:** Ahmed made an error in the tens column. 7 - 4 = 3, not 2. The correct answer is 3,333.
+</details>
+
+### ⚡ Quick Fire Round
+
+**Q6.** Solve mentally: 2,500 + 1,500 - 800
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 3,200
+
+**Explanation:** 2,500 + 1,500 = 4,000. Then 4,000 - 800 = 3,200.
+</details>
+
+---
+
+**🎯 Extension Challenge:** Create your own question in one of the formats above and trade with a partner!
+

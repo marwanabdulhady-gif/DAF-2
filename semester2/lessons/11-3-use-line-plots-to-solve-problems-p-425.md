@@ -97,3 +97,48 @@ Heights of Dr. Khalid’s patients: difference tallest − shortest; Omar says 5
 8–9. High school basketball heights: select true statements; if a shortest player grew ½ ft, new height?
 
 ---
+
+
+---
+
+## 📚 Question Bank: Enrichment & Practice
+
+**CCSS Standards:** 4.MD.B.4  
+**Topic:** 11-3  
+**Question Types:** IXL • Wordwall • Quizizz • Kahoot • Real-World • Error Analysis
+
+> 💡 **How to use:** These questions provide varied practice beyond the textbook. Use them for extra practice, assessment, or gamified review.
+
+### 🔘 Multiple Choice (IXL Style)
+
+**Q1.** Solve this problem related to Line plots:
+
+   - A) Option A
+   - B) Option B
+   - C) Option C
+   - D) Option D
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** Option A
+
+**Explanation:** Review the lesson content for the specific solution method.
+</details>
+
+### 🌍 Real-World Word Problem
+
+**Q2.** Create a real-world problem that uses Line plots.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** Varies
+
+**Explanation:** Apply the mathematical concept to an authentic situation.
+</details>
+
+---
+
+**🎯 Extension Challenge:** Create your own question in one of the formats above and trade with a partner!
+

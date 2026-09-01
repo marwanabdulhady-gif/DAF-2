@@ -163,3 +163,80 @@ Leveled Practice For 5–24, use basic facts and place value to divide.
 - (D) 18 ÷ 6; 30
 
 ---
+
+
+---
+
+## 📚 Question Bank: Enrichment & Practice
+
+**CCSS Standards:** 4.NBT.B.6  
+**Topic:** 5-1  
+**Question Types:** IXL • Wordwall • Quizizz • Kahoot • Real-World • Error Analysis
+
+> 💡 **How to use:** These questions provide varied practice beyond the textbook. Use them for extra practice, assessment, or gamified review.
+
+### 🔘 Multiple Choice (IXL Style)
+
+**Q1.** What is 96 ÷ 8?
+
+   - A) 12
+   - B) 14
+   - C) 10
+   - D) 16
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 12
+
+**Explanation:** Think: 8 × 12 = 96, so 96 ÷ 8 = 12.
+</details>
+
+### ✏️ Fill in the Blank (Wordwall Style)
+
+**Q2.** 135 ÷ 5 = ___ with remainder ___
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 27 with remainder 0
+
+**Explanation:** 135 ÷ 5 = 27 exactly. Check: 27 × 5 = 135.
+</details>
+
+### ✓✗ True or False (Quizizz Style)
+
+**Q3.** True or False: When dividing 23 by 4, the remainder is 3.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** True
+
+**Explanation:** 23 ÷ 4 = 5 R3. Check: (5 × 4) + 3 = 20 + 3 = 23.
+</details>
+
+### 🌍 Real-World Word Problem
+
+**Q4.** A teacher has 127 pencils to distribute equally among 9 students. How many pencils does each student get? How many pencils are left over? What should the teacher do with the remainder?
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 14 pencils each, 1 left over
+
+**Explanation:** 127 ÷ 9 = 14 R1. Each student gets 14 pencils, with 1 left over. The teacher could keep it, give it to one student, or find another fair solution.
+</details>
+
+### 📦 Drag and Drop Sort
+
+**Q5.** Sort these division problems by how to interpret the remainder:
+
+   **Round Up:** 23 people in cars that hold 4 each, 127 cookies in boxes of 12
+   **Ignore Remainder:** $50 ÷ $8 per toy, 100 ÷ 7 days in a week
+   **Remainder is Answer:** Share 17 apples among 5 friends
+
+---
+
+**🎯 Extension Challenge:** Create your own question in one of the formats above and trade with a partner!
+

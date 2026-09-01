@@ -204,3 +204,95 @@ For 9–24, use a number line or place value to round each number to the place o
 | 105,307 | | | | |
 
 ---
+
+
+---
+
+## 📚 Question Bank: Enrichment & Practice
+
+**CCSS Standards:** 4.NBT.A.1, 4.NBT.A.2, 4.NBT.A.3  
+**Topic:** 1-4  
+**Question Types:** IXL • Wordwall • Quizizz • Kahoot • Real-World • Error Analysis
+
+> 💡 **How to use:** These questions provide varied practice beyond the textbook. Use them for extra practice, assessment, or gamified review.
+
+### 🔘 Multiple Choice (IXL Style)
+
+**Q1.** What is the value of the digit 5 in 45,672?
+
+   - A) 5
+   - B) 50
+   - C) 500
+   - D) 5,000
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 5,000
+
+**Explanation:** The 5 is in the thousands place, so its value is 5,000.
+</details>
+
+### ✏️ Fill in the Blank (Wordwall Style)
+
+**Q2.** In the number 387,241, the digit ___ is in the ten thousands place.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 8
+
+**Explanation:** Counting from right: ones, tens, hundreds, thousands, ten thousands. The 8 is in the ten thousands place.
+</details>
+
+### ✓✗ True or False (Quizizz Style)
+
+**Q3.** True or False: 456,789 > 456,879
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** False
+
+**Explanation:** Compare digit by digit from left. At the hundreds place: 7 < 8, so 456,789 < 456,879.
+</details>
+
+### 🔗 Matching Pairs (Kahoot Style)
+
+**Q4.** Match each number with its correct rounded value (round to the nearest thousand):
+
+   **Column A** | **Column B**
+   ---|---
+   12,345 | 12,000
+   67,891 | 68,000
+   45,500 | 46,000
+   99,499 | 99,000
+
+### 🌍 Real-World Word Problem
+
+**Q5.** The population of a small city is 145,672. Round this number to the nearest ten thousand. Explain why rounding might be useful when talking about city populations.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 150,000
+
+**Explanation:** 145,672 rounds to 150,000. Rounding is useful for populations because exact numbers change daily, and rounded numbers are easier to remember and compare.
+</details>
+
+### 🔍 Error Analysis
+
+**Q6.** Sara wrote: 'The number 506,042 in expanded form is 500,000 + 600 + 40 + 2.' Find her mistake and write the correct expanded form.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** 500,000 + 6,000 + 40 + 2
+
+**Explanation:** Sara forgot the thousands place. The 6 is in the thousands place, so it represents 6,000, not 600.
+</details>
+
+---
+
+**🎯 Extension Challenge:** Create your own question in one of the formats above and trade with a partner!
+

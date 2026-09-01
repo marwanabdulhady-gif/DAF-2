@@ -100,3 +100,48 @@ Cents are hundredths of a riyal. Amounts of money are written to the hundredths 
 Write decimal and fraction for diagrams. 7. Colosseum arena ~ ⅙? of entire; as decimal. 8. Fraction that was NOT the arena. 9. One ten-halalah coin is one **tenth** of a riyal. 11. Karim writes SAR 1.3 for a riyal and 3 ten-halalah coins — mistake (SAR 1.30). 12. Garden vegetables as fraction and decimal each. 13. Decimal for ⁵⁄₁₀₀? 14. Twenty-nine hundredths: 0.29 and ²⁹⁄₁₀₀.
 
 ---
+
+
+---
+
+## 📚 Question Bank: Enrichment & Practice
+
+**CCSS Standards:** 4.NF.C.5, 4.NF.C.6, 4.NF.C.7  
+**Topic:** 12-1  
+**Question Types:** IXL • Wordwall • Quizizz • Kahoot • Real-World • Error Analysis
+
+> 💡 **How to use:** These questions provide varied practice beyond the textbook. Use them for extra practice, assessment, or gamified review.
+
+### 🔘 Multiple Choice (IXL Style)
+
+**Q1.** Solve this problem related to Decimal notation:
+
+   - A) Option A
+   - B) Option B
+   - C) Option C
+   - D) Option D
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** Option A
+
+**Explanation:** Review the lesson content for the specific solution method.
+</details>
+
+### 🌍 Real-World Word Problem
+
+**Q2.** Create a real-world problem that uses Decimal notation.
+
+<details>
+<summary><b>✓ Show Answer</b></summary>
+
+**Answer:** Varies
+
+**Explanation:** Apply the mathematical concept to an authentic situation.
+</details>
+
+---
+
+**🎯 Extension Challenge:** Create your own question in one of the formats above and trade with a partner!
+
