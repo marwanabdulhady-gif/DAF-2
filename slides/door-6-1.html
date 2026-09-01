@@ -13756,7 +13756,7 @@ window.DAF_ART = {"omar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAE
   });
 
   /* ---- READING: split-pane reader, hidden ask behind a liftable curtain ---- */
-  AE.register("reading", { name: "The Curtained Reader", stage: "0 / 3" }, function (host, cfg, api) {
+  AE.register("curtain", { name: "The Curtained Reader", stage: "0 / 3" }, function (host, cfg, api) {
     var steps = cfg.steps || [], idx = 0;
     host.innerHTML = '<h3 class="ae-title">' + api.esc(cfg.title || "The Curtained Reader") + "</h3>" +
       '<p class="ae-sub">' + api.esc(cfg.story || "Lift each curtain. Name the hidden ask. Then compute.") + "</p>" +
@@ -13983,67 +13983,44 @@ DAF.boot({
     {
       "stage": 1,
       "phase": "warmup",
-      "connect": "Rapid Cloud Navigation Drill: steer through the correct comparison answers!",
-      "title": "Cloud Navigator · <em>comparison speed</em>",
-      "lead": "Steer your aircraft through the clouds with the correct answer to unlock the next stall corridor!",
-      "pull": "Fly directly through the correct comparison clouds.",
+      "connect": "Balloon Pop Drill: only the TIMES phrases get popped!",
+      "title": "Phrase Balloons · <em>pop the copies</em>",
+      "lead": "The spice-stall breeze lifts phrase balloons. Pop ONLY the phrases that say TIMES as many — multiplication. Let every MORE balloon drift away.",
+      "pull": "Pop the comparison phrases that demand ×; spare the + ones.",
       "rail": {
-        "say": "Use arrow keys or touch to steer through the correct answers.",
+        "say": "Read each phrase fully; the word chooses the operation, not the numbers.",
         "monitor": [
-          "mental multiplication and addition",
-          "reading 'times' vs 'more'"
+          "phrase-to-operation reading",
+          "restraint on MORE balloons"
         ],
-        "miss": "Crashing into the additive trap cloud."
+        "miss": "Popping every balloon in reach."
       },
-      "quest": "Fly through the 4 comparison clouds.",
+      "quest": "Pop all 5 TIMES balloons, spare the rest.",
       "view": {
-        "type": "airplane",
-        "title": "Comparison Cloud Pilot",
-        "instruction": "Steer the airplane with Arrow Keys / W-S or Touch to fly through the correct comparison keys!",
-        "questions": [
-          {
-            "question": "4 × 21 = ?",
-            "options": [
-              "84",
-              "25",
-              "64"
-            ],
-            "answerIndex": 0
-          },
-          {
-            "question": "3 × 89 = ?",
-            "options": [
-              "92",
-              "267",
-              "243"
-            ],
-            "answerIndex": 1
-          },
-          {
-            "question": "238 + 49 = ?",
-            "options": [
-              "287",
-              "277",
-              "297"
-            ],
-            "answerIndex": 0
-          },
-          {
-            "question": "292 + 117 = ?",
-            "options": [
-              "399",
-              "409",
-              "419"
-            ],
-            "answerIndex": 1
-          }
+        "type": "balloon",
+        "theme": "teal",
+        "title": "Pop the ‘times as many’ phrases",
+        "instruction": "Pop only the phrases that say TIMES as many (multiplication). Leave every ‘more than’ balloon.",
+        "targets": [
+          "3 times as many",
+          "4 times as long",
+          "6 × 18",
+          "5 times as many runs",
+          "twice the 18-inch edge"
+        ],
+        "distractors": [
+          "8 more than 4",
+          "4 + 8",
+          "2 more than 6",
+          "238 + 49",
+          "40 more markers"
         ]
       },
       "cast": {
         "npc": "ropeseller",
-        "who": "Omar",
-        "say": "Smooth flying! Notice: even the clouds ask TIMES sometimes and MORE other times.",
-        "pack": "Read the words first; the operation follows."
+        "who": "Zayd",
+        "say": "Five popped, five spared — ‘more than’ phrases got to drift home unharmed.",
+        "pack": "× phrases popped · + phrases spared."
       }
     },
     {
@@ -14091,46 +14068,64 @@ DAF.boot({
     {
       "stage": 2,
       "phase": "connect",
-      "connect": "Connect the comparison words to the equation they demand.",
-      "title": "Karim’s coins · <em>name the operation</em>",
-      "lead": "Karim has 18 coins. Ammar has 6 times as many coins (<i>n</i>). Which equation models this comparison?",
-      "pull": "6 copies of 18. Find the equation.",
+      "connect": "Venn Classifier: two circles — TIMES sends to ×, MORE sends to +.",
+      "title": "Two circles · <em>times vs more</em>",
+      "lead": "The classifier has two circles: ‘Times as many → ×’ and ‘More than → +’. Send each card to its own circle.",
+      "pull": "Tap a card, tap its circle — the words decide.",
       "rail": {
-        "say": "Six times as many means 6 copies of 18: n = 6 × 18 = 108.",
+        "say": "Read for ‘times’ or ‘more’ first; the equation obeys.",
         "monitor": [
-          "variable naming",
-          "operation from words"
+          "word-first classification",
+          "all six cards placed"
         ],
-        "miss": "Writing n = 18 + 6."
+        "miss": "Classifying by the size of the numbers."
       },
-      "quest": "Select the matching comparison equation.",
+      "quest": "Classify all 6 comparison cards.",
       "view": {
-        "type": "pick",
-        "caption": "Ammar has 6 times as many coins as Karim’s 18 (n). Which equation is correct?",
-        "rows": [
+        "type": "venn",
+        "theme": "teal",
+        "title": "Times or More? The Two Circles",
+        "clue": "Sort each comparison. The word makes the operation.",
+        "circleA": {
+          "title": "Times as many → ×",
+          "color": "#00bed6"
+        },
+        "circleB": {
+          "title": "More than → +",
+          "color": "#d4af37"
+        },
+        "items": [
           {
-            "label": "n = 6 × 18  →  n = 108 coins",
-            "ok": true
+            "text": "Kathem: 4 times Jassim’s 21 helmets",
+            "zone": "a"
           },
           {
-            "label": "n = 18 + 6  →  n = 24 coins",
-            "ok": false
+            "text": "Tree: 3 feet more than 128",
+            "zone": "b"
           },
           {
-            "label": "n = 18 ÷ 6  →  n = 3 coins",
-            "ok": false
+            "text": "Coins: 6 times Karim’s 18",
+            "zone": "a"
           },
           {
-            "label": "6 = 18 × n  →  n = 108 coins",
-            "ok": false
+            "text": "Films: 49 more than 238",
+            "zone": "b"
+          },
+          {
+            "text": "Rack: 48 = 6 × 8 markers",
+            "zone": "a"
+          },
+          {
+            "text": "Bottles: 235 more than 82",
+            "zone": "b"
           }
         ]
       },
       "cast": {
         "npc": "ropeseller",
         "who": "Omar",
-        "say": "Six copies of 18 stack to 108. Adding 6 would model '6 more', a different tale.",
-        "pack": "n = 6 × 18 = 108."
+        "say": "Three cards in each circle — every × card said ‘times’ first.",
+        "pack": "times → × circle · more → + circle."
       }
     },
     {
@@ -14423,39 +14418,44 @@ DAF.boot({
     {
       "stage": 3,
       "phase": "practice",
-      "connect": "Tactile Marker Rack: slide to coil 48 markers into 6 equal rows.",
-      "title": "Coil the markers · <em>48 is how many times 8?</em>",
-      "lead": "The marker rack holds 48 markers — 6 times the red row of 8. Drag to coil 48 into 6 equal rows and name ONE row.",
-      "pull": "Slide the divider to 6 coils and lock the 8-marker row.",
+      "connect": "Speed Tap: only multiplication-comparison results count!",
+      "title": "Tap the × results · <em>spare the rest</em>",
+      "lead": "Cards flash across the counter. Tap ONLY the true multiplication-comparison results. Additions and gaps are honest arithmetic — but they are not × comparisons.",
+      "pull": "Tap × results; spare + and − lines.",
       "rail": {
-        "say": "Slide until 6 coils show. One coil is 8 markers; 48 is 6 times 8.",
+        "say": "A true + line is still a + line — it is not what the stall asked for.",
         "monitor": [
-          "slider control",
-          "times-as-many wording"
+          "quick classification",
+          "no false taps on + / −"
         ],
-        "miss": "Saying 48 is 40 times 8."
+        "miss": "Tapping true additions for being true."
       },
-      "quest": "Coil 48 into 6 rows of 8.",
+      "quest": "Tap all 5 × results.",
       "view": {
-        "type": "unwind",
-        "title": "The Marker Rack",
-        "total": 48,
-        "copies": 6,
-        "unit": "markers",
-        "label": "the full rack (48)",
-        "baseLabel": "one red row = 8 markers",
-        "choices": [
-          8,
-          6,
-          40,
-          54
+        "type": "speedtap",
+        "theme": "ember",
+        "title": "Tap the TIMES results only",
+        "instruction": "Tap ONLY multiplication-comparison results. Additions and gaps stay.",
+        "targets": [
+          "4 × 18 = 72",
+          "6 × 18 = 108",
+          "3 × 4 = 12",
+          "6 × 8 = 48",
+          "3 × 89 = 267"
+        ],
+        "distractors": [
+          "18 + 4 = 22",
+          "238 + 49 = 287",
+          "292 + 117 = 409",
+          "317 − 82 = 235",
+          "48 − 8 = 40"
         ]
       },
       "cast": {
         "npc": "ropeseller",
-        "who": "Ghubar",
-        "say": "Ghubar cried '40 times!' — 40 is the GAP (48 − 8), not the count of copies. Six equal coils of 8.",
-        "pack": "48 = 6 × 8 · and 48 − 8 = 40 more."
+        "who": "Zayd",
+        "say": "Fast hands, honest sieve — the × results tapped, the honest + lines respected and left.",
+        "pack": "sieving by operation, not by truth."
       }
     },
     {
@@ -14540,61 +14540,68 @@ DAF.boot({
     {
       "stage": 5,
       "phase": "gate",
-      "connect": "Mastery Gate: 2-target Card Sort under Gate Lock (1 boy, 1 item).",
-      "title": "Mastery Gate · <em>Valid Compare vs Glad Trap</em>",
-      "lead": "Gate Lock active. Sort each statement: a Valid Comparison or a Glad Trap?",
-      "pull": "Sort without assistance. Prove mastery of Door 6-1.",
+      "connect": "Mastery Gate: Gameshow Quiz under Gate Lock (1 boy, 1 item).",
+      "title": "Mastery Gate · <em>word to operation</em>",
+      "lead": "Gate Lock active. Gameshow Quiz: every question is a printed-comparison judgment. 50/50 once if truly stuck. No partner talk.",
+      "pull": "Answer all 4 gate questions without assistance.",
       "rail": {
-        "say": "Mastery Gate. No partner talk. One boy, one item. Stand at the gate.",
+        "say": "Mastery Gate. One boy, one item. Stand at the gate.",
         "monitor": [
           "independent mastery",
-          "zero trap errors"
+          "word-to-operation discipline"
         ],
         "miss": "Multiplying when the words say more."
       },
-      "quest": "Sort all 4 items.",
+      "quest": "Clear all 4 gate questions.",
       "view": {
-        "type": "cardsort",
-        "caption": "Sort each statement into Valid Comparison or Glad Trap:",
-        "items": [
+        "type": "quiz",
+        "theme": "teal",
+        "title": "Gate Quiz · Door 6-1",
+        "questions": [
           {
-            "id": "c1",
-            "text": "Rangers 3 times the Stars’ 4 runs → 3 × 4 = 12",
-            "target": "valid"
+            "question": "‘w is 5 times as many as 9’ — which equation matches?",
+            "options": [
+              "w = 5 × 9",
+              "w = 5 + 9",
+              "5 = 9 × w"
+            ],
+            "answerIndex": 0
           },
           {
-            "id": "c2",
-            "text": "'8 more than 4' means 4 × 8 = 32",
-            "target": "trap"
+            "question": "Jassim has 21 helmets; Kathem has 4 times as many. k = ?",
+            "options": [
+              "25",
+              "84",
+              "80"
+            ],
+            "answerIndex": 1
           },
           {
-            "id": "c3",
-            "text": "48 markers is 6 times 8 markers → 48 = 6 × 8",
-            "target": "valid"
+            "question": "Luqman sold 317 bottles, Karim 82. How many MORE did Luqman sell?",
+            "options": [
+              "235 more",
+              "399 more",
+              "5 times more"
+            ],
+            "answerIndex": 0
           },
           {
-            "id": "c4",
-            "text": "'3 times as many as 4' means 4 + 3 = 7",
-            "target": "trap"
-          }
-        ],
-        "targets": [
-          {
-            "id": "valid",
-            "label": "Valid Comparison (Correct)"
-          },
-          {
-            "id": "trap",
-            "label": "Glad Trap (Wrong Operation)"
+            "question": "600 = 12 × 50. The comparison reads…",
+            "options": [
+              "600 is 12 times as many as 50",
+              "600 is 12 more than 50",
+              "50 is 12 times 600"
+            ],
+            "answerIndex": 0
           }
         ]
       },
       "cast": {
-        "lock": "gate",
+        "npc": "ropeseller",
         "who": "Omar",
-        "say": "The Gate is passed! You never let 'more' sneak into the multiplication stall.",
-        "folio": "One boy, one item. Integrity at the gate.",
-        "pack": "Mastery of comparison choice achieved."
+        "say": "The Gate is passed — even the 50/50 line stayed honest.",
+        "pack": "Mastery of word-to-operation judgment achieved.",
+        "lock": "gate"
       }
     },
     {

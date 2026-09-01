@@ -13756,7 +13756,7 @@ window.DAF_ART = {"omar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAE
   });
 
   /* ---- READING: split-pane reader, hidden ask behind a liftable curtain ---- */
-  AE.register("reading", { name: "The Curtained Reader", stage: "0 / 3" }, function (host, cfg, api) {
+  AE.register("curtain", { name: "The Curtained Reader", stage: "0 / 3" }, function (host, cfg, api) {
     var steps = cfg.steps || [], idx = 0;
     host.innerHTML = '<h3 class="ae-title">' + api.esc(cfg.title || "The Curtained Reader") + "</h3>" +
       '<p class="ae-sub">' + api.esc(cfg.story || "Lift each curtain. Name the hidden ask. Then compute.") + "</p>" +
@@ -14116,91 +14116,111 @@ DAF.boot({
     {
       "stage": 2,
       "phase": "connect",
-      "connect": "Connect the rotated queue to the equation that never changes.",
-      "title": "The Wind Hall vs Coal · <em>one comparison, two stalls</em>",
-      "lead": "To generate 1 megawatt hour: coal costs SAR 105, wind SAR 87. How much MORE do 9 megawatt hours cost with coal than with wind?",
-      "pull": "Two routes: 9 × (105 − 87), or (9 × 105) − (9 × 87). Both arrive at 162.",
+      "connect": "Label the Diagram: pin the three stalls of the concert queue.",
+      "title": "Mark the concert strip · <em>s, f, r in order</em>",
+      "lead": "The queue strip is drawn but unlabeled. Place the pins: s = 96 fifth graders, f = 82 fourth graders, r = 10 R2 — and the 11th row the remainder demands.",
+      "pull": "Tap where each stall belongs on the queue strip.",
       "rail": {
-        "say": "Find the per-megawatt gap first, or multiply both and subtract: the route may differ, the gate is one.",
+        "say": "The strip must keep the stalls in order AND honor the remainder.",
         "monitor": [
-          "distributive equivalence",
-          "variable naming"
+          "stalls pinned in order",
+          "the 11th row marked"
         ],
-        "miss": "Computing 105 − 87 and reporting 18 as the final answer."
+        "miss": "Pinning 82 before 96."
       },
-      "quest": "Select the equation that answers the question asked.",
+      "quest": "Mark s, f, r and the extra row.",
       "view": {
-        "type": "pick",
-        "caption": "Which line answers: how much more for 9 MWh with coal than wind?",
-        "rows": [
+        "type": "diagram",
+        "theme": "warm",
+        "title": "The Concert Queue, Marked",
+        "clue": "Pin the three stalls of the queue and the row the remainder earns.",
+        "hotspots": [
           {
-            "label": "c = 9 × (105 − 87)  →  c = 162 SAR",
-            "ok": true
+            "x": 0.22,
+            "y": 0.3,
+            "label": "s = 12 × 8 = 96 fifth graders",
+            "color": "#00bed6"
           },
           {
-            "label": "c = 105 − 87  →  c = 18 SAR",
-            "ok": false
+            "x": 0.5,
+            "y": 0.5,
+            "label": "f = 178 − 96 = 82 fourth graders",
+            "color": "#0e8f94"
           },
           {
-            "label": "c = 9 × 105 + 9 × 87",
-            "ok": false
+            "x": 0.75,
+            "y": 0.7,
+            "label": "r = 82 ÷ 8 = 10 R2",
+            "color": "#b45309"
           },
           {
-            "label": "c = 105 + 87  →  c = 192 SAR",
-            "ok": false
-          }
-        ]
-      },
-      "cast": {
-        "npc": "ropeseller",
-        "who": "Omar",
-        "say": "18 is the stall, 162 is the gate. Multiply the per-megawatt difference by 9 — or subtract the two totals; both paths show amānah.",
-        "pack": "c = 9 × 18 = 162 SAR more for coal."
-      }
-    },
-    {
-      "stage": 2,
-      "phase": "practice",
-      "connect": "Line & Pair Matching: connect each stall to its equation.",
-      "title": "Match the stall to its <em>equation</em>",
-      "lead": "Every queue stall and the gate. Connect each question to the equation that answers it.",
-      "pull": "Connect pairs with glowing lines.",
-      "rail": {
-        "say": "s, f, r — and an energy gate. Match each ask to its line.",
-        "monitor": [
-          "step-to-equation mapping"
-        ],
-        "miss": "Matching r to the subtraction line."
-      },
-      "quest": "Connect all 4 pairs.",
-      "view": {
-        "type": "matching",
-        "title": "Queue Stall to Equation",
-        "instruction": "Tap a question on the left, then tap its matching equation on the right.",
-        "pairs": [
-          {
-            "a": "How many fifth graders?",
-            "b": "s = 12 × 8 = 96"
-          },
-          {
-            "a": "How many fourth graders?",
-            "b": "f = 178 − 96 = 82"
-          },
-          {
-            "a": "How many rows for the fourth grade?",
-            "b": "r = 82 ÷ 8 = 10 R2 → 11 rows"
-          },
-          {
-            "a": "9 MWh: coal costs how much more?",
-            "b": "c = 9 × (105 − 87) = 162 SAR"
+            "x": 0.5,
+            "y": 0.88,
+            "label": "the 11th row — 2 still standing",
+            "color": "#d4af37"
           }
         ]
       },
       "cast": {
         "npc": "ropeseller",
         "who": "Zayd",
-        "say": "All four pairs match! Notice the energy gate has the same shape: a hidden gap, then the multiply.",
-        "pack": "Every stall question earns its own equation."
+        "say": "Marked: 96, then 82, then 10 R2 — and the eleventh row wears its own pin.",
+        "pack": "the queue strip, stalls in order."
+      }
+    },
+    {
+      "stage": 2,
+      "phase": "practice",
+      "connect": "Memory Match: pair each queue equation with the stall it serves.",
+      "title": "Memory · <em>equation meets meaning</em>",
+      "lead": "Twelve cards face down on the qahwa tray. Flip two: each equation card wants the card that names the stall it answers.",
+      "pull": "Pair each equation with its meaning.",
+      "rail": {
+        "say": "An equation without its stall name is a price tag on the wrong pot.",
+        "monitor": [
+          "equation-to-meaning pairing",
+          "all 6 pairs found"
+        ],
+        "miss": "Pairing by similar numbers instead of meaning."
+      },
+      "quest": "Find all 6 pairs.",
+      "view": {
+        "type": "memory",
+        "theme": "warm",
+        "title": "The Queue Tray Memory",
+        "clue": "Flip two cards: pair each equation with the stall it answers.",
+        "pairs": [
+          {
+            "a": "12 × 8",
+            "b": "fifth graders = 96"
+          },
+          {
+            "a": "178 − 96",
+            "b": "fourth graders = 82"
+          },
+          {
+            "a": "82 ÷ 8",
+            "b": "= 10 R2 stalls"
+          },
+          {
+            "a": "10 R2 → 11",
+            "b": "rows for everyone"
+          },
+          {
+            "a": "15 × 8 + 8 × 6",
+            "b": "Anas earned 168"
+          },
+          {
+            "a": "199 − 168",
+            "b": "needs 31 more SAR"
+          }
+        ]
+      },
+      "cast": {
+        "npc": "ropeseller",
+        "who": "Omar",
+        "say": "Six honest pairs on one tray — every equation remembered its stall.",
+        "pack": "equations paired with meanings."
       }
     },
     {

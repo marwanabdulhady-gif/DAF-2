@@ -13756,7 +13756,7 @@ window.DAF_ART = {"omar": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAE
   });
 
   /* ---- READING: split-pane reader, hidden ask behind a liftable curtain ---- */
-  AE.register("reading", { name: "The Curtained Reader", stage: "0 / 3" }, function (host, cfg, api) {
+  AE.register("curtain", { name: "The Curtained Reader", stage: "0 / 3" }, function (host, cfg, api) {
     var steps = cfg.steps || [], idx = 0;
     host.innerHTML = '<h3 class="ae-title">' + api.esc(cfg.title || "The Curtained Reader") + "</h3>" +
       '<p class="ae-sub">' + api.esc(cfg.story || "Lift each curtain. Name the hidden ask. Then compute.") + "</p>" +
@@ -13856,7 +13856,7 @@ DAF.boot({
   "title": "Make Sense and Persevere — Problem Solving",
   "unit": "Grade 4 · Topic 6 · Door 6-6 · Souq al-Su’al",
   "bg": "brass",
-  "npc": "ropeseller",
+  "npc": "jadd",
   "tale": {
     "who": "ropeseller",
     "title": "A second way. If stuck, another path — that is sabr.",
@@ -13922,7 +13922,7 @@ DAF.boot({
         "gateLine": "Two alleys, one gate: 51 hours — sabr has two feet."
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Zayd",
         "say": "Ghubar ran out of one alley and froze. Watch: the second alley opens — division or walk, both reach 51.",
         "folio": "A stuck plan is not a failure; a second path runs beside the first.",
@@ -13982,7 +13982,7 @@ DAF.boot({
         "html": "<div style='font-size:24px; line-height:1.6;'><b>Ali’s Plan:</b><br/>Sense: tuba 1,431 · savings 1,025 · wage 8/hour.<br/>Hidden gap: 1,431 − 1,025 = <b>406 SAR</b> still to earn.<br/>Hours: 406 ÷ 8 = <b>50 R6</b><br/><br/>50 hours earns only 400 — not enough. Ali works <b>51 hours</b>.<br/><i>Check: 51 × 8 = 408 ≥ 406 ✓</i></div>"
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Zayd",
         "say": "The plan was spoken first: find the gap, divide by wage, interpret the left-over. Numbers obeyed the plan.",
         "folio": "Say the plan aloud, then let the numbers execute it.",
@@ -13992,67 +13992,37 @@ DAF.boot({
     {
       "stage": 1,
       "phase": "warmup",
-      "connect": "Rapid Cloud Navigation Drill: steer through the sense-first answers!",
-      "title": "Cloud Navigator · <em>sense-first speed</em>",
-      "lead": "Steer your aircraft through the clouds with the correct make-sense answers!",
-      "pull": "Fly directly through the correct clouds.",
+      "connect": "Scratch & Reveal: the rule of sabr hides under the lantern foil.",
+      "title": "The lantern foil · <em>scratch the rule</em>",
+      "lead": "A gilded foil covers the brass stall’s rule. Scratch it away, read what the lantern was keeping — then answer the question it asks.",
+      "pull": "Scratch, read, and answer the mystery question.",
       "rail": {
-        "say": "Use arrow keys or touch to steer through the correct answers.",
+        "say": "Mystery hook — the reveal sets the door’s question: what does a mathematician do when stuck?",
         "monitor": [
-          "quantity naming",
-          "interpretation of remainders"
+          "reveal before answering",
+          "rule read aloud"
         ],
-        "miss": "Choosing the raw quotient when the situation demands rounding up."
+        "miss": "Answering before scratching."
       },
-      "quest": "Fly through the 4 sense-first clouds.",
+      "quest": "Scratch the foil and answer its question.",
       "view": {
-        "type": "airplane",
-        "title": "Second-Path Pilot",
-        "instruction": "Steer the airplane with Arrow Keys / W-S or Touch to fly through the correct keys!",
-        "questions": [
-          {
-            "question": "159 × 9 = ?",
-            "options": [
-              "1,431",
-              "1,521",
-              "1,341"
-            ],
-            "answerIndex": 0
-          },
-          {
-            "question": "1,431 − 1,025 = ?",
-            "options": [
-              "416",
-              "406",
-              "436"
-            ],
-            "answerIndex": 1
-          },
-          {
-            "question": "406 ÷ 8 = ?",
-            "options": [
-              "50 R6",
-              "48 R2",
-              "51"
-            ],
-            "answerIndex": 0
-          },
-          {
-            "question": "1,928 − 538 = ?",
-            "options": [
-              "1,390",
-              "1,400",
-              "1,290"
-            ],
-            "answerIndex": 0
-          }
-        ]
+        "type": "scratch",
+        "theme": "night",
+        "title": "The Foil of the Second Way",
+        "clue": "Scratch the lantern foil to reveal the rule of sabr.",
+        "secretSvg": "<div style='font-size:52px'>✦</div><div style='font-weight:800;font-size:22px'>If stuck, another road.<br><em style='color:#f4dfa0'>The second way opens the gate.</em></div>",
+        "options": [
+          "Give up at the first plan",
+          "Try a second sensible way",
+          "Skip the final check"
+        ],
+        "answerIndex": 1
       },
       "cast": {
         "npc": "ropeseller",
-        "who": "Omar",
-        "say": "Smooth flying! Every cloud was a quantity with a name — not a number dropped from the sky.",
-        "pack": "Name the quantity before you fly through it."
+        "who": "Jadd Khalid",
+        "say": "The foil is scratched, the rule is read: a second way — that is sabr, said aloud.",
+        "pack": "sabr: if stuck, another road."
       }
     },
     {
@@ -14091,7 +14061,7 @@ DAF.boot({
         "caption": "Zayd’s habit is amānah. A check multiplies back and asks: does this cover the real need? 400 does not reach 406; 408 does."
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Zayd",
         "say": "The check is not extra work — it is the proof that the work fits the world. 51 hours, with proof.",
         "pack": "Check: multiply back and compare with the need."
@@ -14136,7 +14106,7 @@ DAF.boot({
         ]
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Omar",
         "say": "Backwards through the chain: 1,390 for the python, 695 for the rattlesnake. The words 'more' and 'twice' told us which direction to walk.",
         "pack": "python 1,390 · rattlesnake 695 · backwards with sense."
@@ -14144,48 +14114,65 @@ DAF.boot({
     },
     {
       "stage": 2,
-      "phase": "practice",
-      "connect": "Line & Pair Matching: connect each quantity name to its finding.",
-      "title": "Match the quantity to its <em>value</em>",
-      "lead": "Sense first: every quantity has a name and a path. Connect each named quantity to the line that finds it.",
-      "pull": "Connect pairs with glowing lines.",
+      "phase": "connect",
+      "connect": "Venn Classifier: send each move to Sense/Plan or Check/Prove.",
+      "title": "Two circles · <em>sense moves vs check moves</em>",
+      "lead": "Two circles on the counter: ‘Sense & Plan’ and ‘Check & Prove’. Send each move from Ali’s tuba journey to its own circle.",
+      "pull": "Tap a move, tap its circle.",
       "rail": {
-        "say": "Name the quantity on the left, then find the line that earns it.",
+        "say": "Naming and planning open the road; multiplying back closes it with proof.",
         "monitor": [
-          "quantity naming",
-          "path correctness"
+          "habit classification",
+          "all six moves placed"
         ],
-        "miss": "Matching values without reading the names."
+        "miss": "Calling the check another computation step."
       },
-      "quest": "Connect all 4 quantity pairs.",
+      "quest": "Classify all 6 moves.",
       "view": {
-        "type": "matching",
-        "title": "Named Quantity to Its Line",
-        "instruction": "Tap a quantity name on the left, then tap the line that finds it.",
-        "pairs": [
+        "type": "venn",
+        "theme": "forest",
+        "title": "Sense & Plan · Check & Prove",
+        "clue": "Sort each move. Habits, not numbers.",
+        "circleA": {
+          "title": "Sense & Plan",
+          "color": "#00bed6"
+        },
+        "circleB": {
+          "title": "Check & Prove",
+          "color": "#d4af37"
+        },
+        "items": [
           {
-            "a": "Cost of Ali’s tuba — 9 times 159",
-            "b": "159 × 9 = 1,431 SAR"
+            "text": "Name it: tuba = 9 × trumpet",
+            "zone": "a"
           },
           {
-            "a": "Gap Ali must still earn",
-            "b": "1,431 − 1,025 = 406 SAR"
+            "text": "Plan: gap = 1,431 − 1,025",
+            "zone": "a"
           },
           {
-            "a": "Hours to work (no student left unpaid)",
-            "b": "406 ÷ 8 = 50 R6 → 51 hours"
+            "text": "Implement: 406 ÷ 8 = 50 R6",
+            "zone": "a"
           },
           {
-            "a": "Python’s area — 538 less than anaconda",
-            "b": "1,928 − 538 = 1,390 sq ft"
+            "text": "Multiply back: 50 × 8 = 400",
+            "zone": "b"
+          },
+          {
+            "text": "Compare: 400 < 406 → 51 h",
+            "zone": "b"
+          },
+          {
+            "text": "Prove: 51 × 8 = 408 ≥ 406",
+            "zone": "b"
           }
         ]
       },
       "cast": {
         "npc": "ropeseller",
         "who": "Zayd",
-        "say": "All four quantities matched! A value without a name is a price tag on the wrong stall.",
-        "pack": "Name first · line second · value last."
+        "say": "Three moves make sense, three moves prove it — the two circles shake hands at 51 hours.",
+        "pack": "sense & plan · check & prove — both earned."
       }
     },
     {
@@ -14217,7 +14204,7 @@ DAF.boot({
         ]
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Omar",
         "say": "Precisely recited! Find, know, plan, second way, check — the five habits light the lantern.",
         "pack": "find · know · plan · another way · check."
@@ -14305,7 +14292,7 @@ DAF.boot({
         ]
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Zayd",
         "say": "Great progress across all three tiers! Gold had a trap — the 35 left-over square inches were never needed.",
         "pack": "Sense decides which facts board the caravan."
@@ -14361,7 +14348,7 @@ DAF.boot({
         "gateLine": "Both chains land on python 1,390 · rattlesnake 695."
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Omar",
         "say": "Two chains measured the same house — when the methods agree, the answer owns the gate.",
         "pack": "python 1,390 · rattlesnake 695 — two ways."
@@ -14435,7 +14422,7 @@ DAF.boot({
         ]
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Zayd",
         "say": "Flawless sorting! Two moves made sense, two persevered, two checked — a complete mathematician’s toolkit.",
         "pack": "sense · persevere · check — habits, not luck."
@@ -14473,7 +14460,7 @@ DAF.boot({
         ]
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Ghubar",
         "say": "Ghubar halved and fled. The lantern made him walk back: 695 × 2 = 1,390. The return walk is the proof.",
         "pack": "1,390 ÷ 2 = 695 · checked by 695 × 2."
@@ -14523,7 +14510,7 @@ DAF.boot({
         ]
       },
       "cast": {
-        "npc": "ropeseller",
+        "npc": "jadd",
         "who": "Omar",
         "say": "Identify → relate → implement → check. The second path lives inside Move 3 — it is a habit, not a failure.",
         "pack": "Sense · relate · implement · check."
